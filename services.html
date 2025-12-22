@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crustz n' Bites Services</title>
+
+    <style>
+        /* For making website responssive on mobile */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        .Header {
+            height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1682778418768-16081e4470a1?fm=jpg&q=60&w=3000');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .header-content h1 {
+            font-size: 4em;
+            margin-bottom: 0.3em;
+        }
+
+        .header-content p {
+            font-size: 1.5em;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background-color: #333;
+            text-align: center;
+            padding: 15px;
+        }
+
+            .navbar a {
+                text-decoration: none;
+                color: white;
+                margin: 0 25px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+                .navbar a:hover {
+                    color: #f4c430;
+                }
+
+        main section {
+            padding: 60px;
+            text-align: center;
+            background-color: #FAF9F6;
+        }
+
+        h2 {
+            font-size: 2em;
+        }
+
+
+        /* SERVICES */
+        .servicesBox {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .service {
+            background-color: #efd88a;
+            padding: 20px;
+            border-radius: 20px;
+            width: 280px;
+        }
+
+            .service:hover {
+                transform: translateY(-8px);
+                background-color: #f4c430;
+                cursor: pointer;
+            }
+
+            .service h3 {
+                margin-bottom: 10px;
+            }
+
+            /* SERVICES IMAGES */
+            .service img {
+                width: 100%;
+                height: 180px;
+                object-fit: cover;
+                border-radius: 15px;
+                margin-bottom: 10px;
+            }
+
+        footer {
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+
+            footer h3 {
+                color: #f4c430;
+            }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="Header">
+        <div class="header-content">
+            <h1>Crustz n' Bites</h1>
+            <p>Experience the Taste of Tradition</p>
+        </div>
+    </header>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="HomePage.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="index.html">Menu</a>
+        <a href="#Contact">Contact</a>
+    </nav>
+
+    <main>
+
+        <!-- SERVICES INTRO -->
+        <section id="sectionintro" >
+            <h2>Our Services</h2>
+            <p>
+                At Crustz n’ Bites, we don’t just serve food — we create experiences.
+                From relaxed dine-ins to special occasions, we’re here for you.
+            </p>
+
+            <!-- SERVICES CONTENT -->
+            <div class="servicesBox">
+
+                <div class="service">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5" alt="Dine In">
+                    <h3>🍽️ Dine-In</h3>
+                    <p>
+                        Enjoy a warm, comfortable atmosphere with freshly prepared
+                        meals with your family and an ideal place for corporate dinners.
+                    </p>
+                </div>
+
+                <div class="service">
+                    <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="Takeaway">
+                    <h3>🚗 Takeaway</h3>
+                    <p>
+                        Order your favorite dishes and take them home —
+                        quick, easy, and delicious.
+                    </p>
+                </div>
+
+                <div class="service">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4" alt="Event Catering" />
+                    <h3>🎉 Event Catering</h3>
+                    <p>
+                        Hosting a party or meeting? We offer catering services
+                        with customized menus for every occasion.
+                    </p>
+                </div>
+
+                <div class="service">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0" alt="Table Booking">
+                    <h3>📅 Book a Table</h3>
+                    <p>
+                        Reserve your table in advance and enjoy a smooth,
+                        hassle-free dining experience with your loved ones.
+                    </p>
+                </div>
+
+
+                <div class="service">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqqNNWx6mHXIVtL480D7Gd-bcSaufI5300nQ&s" alt="Home Delivery">
+                    <h3>🚚 Home Delivery</h3>
+                    <p>
+                        Get delicious meals delivered hot and fresh straight to
+                        your doorstep, anytime you crave comfort food.
+                    </p>
+                </div>
+
+
+            </div>
+        </section>
+
+    </main>
+
+    <!--FOOTER-->
+    <footer id="Contact">
+        <h3>Contact Details</h3>
+        <p>F-11 Markaz, Islamabad</p>
+        <p>📞 Phone: (555) 123-4567</p>
+        <p>📧 Email: crustznbites@gmail.com</p>
+        <p>⏰ Open Daily: 11 AM – 10 PM</p>
+    </footer>
+
+</body>
+</html>
