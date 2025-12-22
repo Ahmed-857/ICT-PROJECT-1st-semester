@@ -1,10 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crustz n' Bites - Menu</title>
-
+    <title>Crustz n' Bites Home</title>
     <style>
         /* For making website responssive on mobile */
         @media (max-width: 768px) {
@@ -13,17 +12,13 @@
             }
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
         body {
-            background: #FAF9F6;
+            margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
         }
 
-        /* ===== HEADER ===== */
+        /* Header */
         .Header {
             height: 450px;
             display: flex;
@@ -31,7 +26,7 @@
             justify-content: center;
             text-align: center;
             color: white;
-            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1682778418768-16081e4470a1?fm=jpg&q=60&w=3000');
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1682778418768-16081e4470a1?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudCUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA=');
             background-size: cover;
             background-position: center;
         }
@@ -45,36 +40,14 @@
             font-size: 1.5em;
         }
 
-        /* ===== MAIN NAVBAR  ===== */
+        /* Navbar */
         .navbar {
             background-color: #333;
             text-align:center;
-            padding:15px;
-            background: #333 linear-gradient(to bottom, #333 85%, #555 100%);
+            padding: 15px;
         }
-
 
             .navbar a {
-                text-decoration: none;
-                color: white;
-                margin: 0 25px;
-                font-size: 23px;
-                font-weight: bold;
-                padding-bottom:10px;
-            }
-
-                .navbar a:hover {
-                    color: #f4c430;
-                }
-
-
-        .secondNav {
-            background-color: #555;
-            padding: 10px 15px;
-            text-align:center;
-        }
-
-            .secondNav a {
                 text-decoration: none;
                 color: white;
                 margin: 0 25px;
@@ -82,120 +55,142 @@
                 font-weight: bold;
             }
 
-                .secondNav a:hover {
+                .navbar a:hover {
                     color: #f4c430;
                 }
 
-        /* ===== SECTION TITLES ===== */
-        .section-title {
+
+
+        main section {
+            padding: 60px 20px;
             text-align: center;
-            font-size: 30px;
-            font-weight: 700;
-            color: black;
-            margin: 40px 0 20px;
-            text-transform: uppercase;
+            background-color: #FAF9F6;
         }
 
-        /* ===== MENU CARDS ===== */
-        .menu-container {
+        .Intro h2, .sign h2 {
+            font-weight: bold;
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        .Intro p {
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+            color: black;
+        }
+
+        /* Signature dishes */
+        .img-box {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .dish {
+            width: 300px;
+            text-align: center;
+        }
+
+            .dish:hover {
+                transform: translateY(-8px);
+                cursor: pointer;
+            }
+
+            .dish img {
+                border-radius: 20px;
+                width: 100%;
+                height: 220px;
+                object-fit: cover;
+                margin-bottom: 10px;
+            }
+
+            .dish p {
+                font-size: 1em;
+                color: #333;
+            }
+
+        /*---------menu button-----------*/
+        #Menu {
+            background: #333;
+            border-radius: 30px;
+            color: white;
+            padding: 20px;
+            font-weight: bold;
+            font-size: 1em;
+            margin-top: 50px;
+        }
+
+            #Menu:hover {
+                transform: translateY(-8px);
+                background-color: #f4c430;
+                color: black;
+                cursor: pointer;
+            }
+
+        /*------------- SPECIAL OFFERS ---------------*/
+
+        #special-offers {
+            padding: 50px;
+            text-align: center;
+        }
+
+            #special-offers h2 {
+                font-size: 2em;
+                font-weight: bold;
+                margin-bottom: 40px;
+                color: #C85B32;
+            }
+
+        .offersBox {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 25px;
+        }
+
+        .offer:hover {
+            transform: translateY(-8px);
+            background-color: #f4c430;
+            cursor: pointer;
+        }
+
+        .offer {
+            background-color: #efd88a;
             padding: 20px;
+            border-radius: 20px;
+            width: 250px;
+            text-align: center;
         }
 
-        /*-------------- FOOD DIV CLASS IS FOR MAKING CARDS OF FOOD BY USING FLEX BOX AND MAKING A CONTAINER -----------------------*/
-
-        .food {
-            width: 33%;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 0 15px #00000035;
-            overflow: hidden;
-            flex: 1 1 250px;
-            max-width: 100%;
-        }
-
-            .food img {
-                width: 100%;
-                height: 250px;
-                object-fit: cover;
+            .offer h3 {
+                font-size: 1.2em;
+                margin-bottom: 10px;
+                color: black;
             }
 
-        /*--------------  FOOD NAME AND PRICE ---------------------*/
-
-        .details {
-            justify-content: space-between;
-            padding: 15px;
-        }
-
-            .details h5 {
-                font-size: 18px;
-                font-weight: 600;
+            .offer p {
+                font-size: 1em;
+                line-height: 1.4;
+                color: black;
             }
-
-        .price {
-            font-size: 18px;
-            font-weight: 700;
-            color: rgb(245, 78, 0);
-        }
-
-      /*---------------- FOR FOOD CARDS BUTTONS AND INFO ----------------------*/
-
-        .info {
-            padding: 0 15px 20px;
-        }
-
-            .info p {
-                color: #6f6f6f;
-                font-size: 15px;
-                margin-bottom: 12px;
-                line-height: 22px;
-            }
-
-            .info button {
-                background: red;
-                color: white;
-                border: none;
-                padding: 10px 0;
-                width: 160px;
-                font-size: 14px;
-                font-weight: 600;
-                border-radius: 5px;
-                cursor: pointer;
-            }
-
-                .info button:hover {
-                    background: darkred;
-                }
-
-        /*--------section divider is hr---------*/
-        hr {
-            height: 5px;
-            background: rgba(0, 0, 0, 0.4);
-            margin: 20px 0;
-        }
-
-        /* ===== FOOTER ===== */
 
         footer {
-            padding: 35px ;
+            padding: 20px;
             background-color: #333;
             color: white;
             text-align: center;
             font-size: 1em;
-
         }
 
             footer h3 {
                 color: #f4c430;
             }
-
     </style>
-
 </head>
-
 <body>
 
     <header class="Header">
@@ -206,155 +201,84 @@
     </header>
 
     <nav class="navbar">
-        <a href="HomePage.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="services.html">Services</a>
-        <a href="index.html">Menu</a>
+        <a href="menu.html">Menu</a>
         <a href="#Contact">Contact</a>
     </nav>
 
-    <nav class="secondNav">
-        <a href="#fastfood">Fast Foods</a>
-        <a href="#desserts">Desserts</a>
-        <a href="#beverages">Beverages</a>
-    </nav>
+    <main>
+        <!-- Introduction -->
+        <section id="Intro" class="Intro">
+            <h2>Welcome to Crustz n’ Bites — where every meal feels like home.</h2>
+            <p>Our restaurant blends traditional flavors with a modern touch, offering freshly prepared dishes made with quality ingredients and a whole lot of love. Whether you’re craving comfort food, exploring new tastes, or simply looking for a cozy place to relax, we’re here to serve you a memorable experience.</p>
+        </section>
+
+        <!-- Signature Dishes -->
+
+        <section id="Signature" class="sign">
+            <h2>Some of Our Special Dishes</h2>
+            <div class="img-box">
+                <div class="dish">
+                    <img src="https://www.momontimeout.com/wp-content/uploads/2021/10/best-waffle-recipe.jpeg" alt="Waffles">
+                    <p><strong>Waffles:</strong> Crispy on the outside, soft on the inside, served with fresh fruits and syrup.</p>
+                </div>
+                <div class="dish">
+                    <img src="https://www.vanillabeancuisine.com/wp-content/uploads/2024/12/Spaghetti-Alfredo-2nd-Set-7.jpg" alt="Alfredo Pasta">
+                    <p><strong>Alfredo Pasta:</strong> Creamy Alfredo sauce tossed with perfectly cooked spaghetti and parmesan.</p>
+                </div>
+                <div class="dish">
+                    <img src="https://media.istockphoto.com/id/542331706/photo/homemade-spicy-shrimp-tacos.jpg?s=612x612&w=0&k=20&c=fxx5deD9YgseQfLc3IFZpoMfwdq8Fb7jYimAjITs6TA=" alt="Tacos">
+                    <p><strong>Spicy Shrimp Tacos:</strong> Freshly grilled shrimp with tangy sauce and crunchy veggies wrapped in soft tortillas.</p>
+                </div>
+                <div class="dish">
+                    <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Burger">
+                    <p><strong>Gourmet Burger:</strong> Juicy beef patty, fresh lettuce, tomato, and our signature sauce in a toasted bun.</p>
+                </div>
+                <div class="dish">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStFlz5MDpX3u8z0E4xEawKyeps-zumhpwRTg&s" alt="Pizza">
+                    <p><strong>Wood-fired Pizza:</strong> Thin crust pizza topped with fresh ingredients and baked to perfection in a wood-fired oven.</p>
+                </div>
+            </div>
+
+            <a href="menu.html">
+                <button id="Menu">View Menu</button>
+            </a>
+
+        </section>
 
 
-                       <!------------------FAST FOOD SECTION------------------------->
+        <!-- Special Offers -->
+        <section id="special-offers">
+            <h2>Special Offers</h2>
+
+            <div class="offersBox">
+                <div class="offer">
+                    <h3>🍕 Pizza Fridays</h3>
+                    <p>Enjoy 20% off on all wood-fired pizzas every Friday!</p>
+                </div>
+                <div class="offer">
+                    <h3>🧇 Waffle Weekend</h3>
+                    <p>Buy one, get one free on all signature waffles during the weekend.</p>
+                </div>
+                <div class="offer">
+                    <h3>🥗 Lunch Combo</h3>
+                    <p>Get a main dish, salad, and drink for a special price every weekday.</p>
+                </div>
+            </div>
+        </section>
 
 
-    <h2 class="section-title" id="fastfood">Fast Foods</h2>
-    <div class="menu-container">
-        <div class="food">
-            <img src="https://img.freepik.com/free-photo/delicious-vegan-burger-presentation_23-2151910916.jpg" alt="Zinger Burger">
-            <div class="details">
-                <h5>Chicken Zinger Burger</h5>
-                <h5 class="price">RS 550</h5>
-            </div>
-            <div class="info">
-                <p>Crispy chicken patty with cheese, sauces and fresh vegetables.</p>
-                <button>Add to Cart</button>
-            </div>
-        </div>
-
-        <div class="food">
-            <img src="https://images.pexels.com/photos/2955819/pexels-photo-2955819.jpeg" alt="Spicy Burrito">
-            <div class="details">
-                <h5>Spicy Burrito</h5>
-                <h5 class="price">RS 850</h5>
-            </div>
-            <div class="info">
-                <p>Soft burrito filled with spicy chicken and fresh vegetables.</p>
-                <button>Add to Cart</button>
-            </div>
-        </div>
-
-        <div class="food">
-            <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1RlslO.img" alt="Sandwich">
-            <div class="details">
-                <h5>Salad Sandwich</h5>
-                <h5 class="price">RS 350</h5>
-            </div>
-            <div class="info">
-                <p>Healthy sandwich filled with vegetables and light sauces.</p>
-                <button>Add to Cart</button>
-            </div>
-        </div>
-    </div>
-
-
-    <hr />
-                                                               <!---------------- DESSERT SECTION ----------------------->
-
-    <h2 class="section-title" id="desserts">Desserts</h2>
-    <div class="menu-container">
-        <div class="food">
-            <img src="https://crvenajabukamarindvor.ba/wp-content/uploads/2024/04/V-INSP-26-28-04-BANER-body.jpg" alt="Lotus Pastry">
-            <div class="details">
-                <h5>Lotus Cheese Pastry</h5>
-                <h5 class="price">RS 550</h5>
-            </div>
-            <div class="info">
-                <p>Creamy cheesecake layered with lotus spread and biscuit crumbs.</p>
-                <button>Add to Cart</button>
-            </div>
-        </div>
-
-        <div class="food">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS47oAQMA5W6ddJWuETVS0l3k5sPDinriIGyQ&s" alt="Nutella Pastry">
-            <div class="details">
-                <h5>Nutella Pastry</h5>
-                <h5 class="price">RS 450</h5>
-            </div>
-            <div class="info">
-                <p>Soft chocolate sponge filled with rich Nutella cream.</p>
-                <button>Add to Cart</button>
-            </div>
-        </div>
-
-        <div class="food">
-            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-0sla99t4bs28up65k9597o7pm3-20191117040118.Medi.jpeg" alt="Baklava">
-            <div class="details">
-                <h5>Baklava</h5>
-                <h5 class="price">RS 400</h5>
-            </div>
-            <div class="info">
-                <p>Crispy filo pastry filled with nuts and sweet syrup.</p>
-                <button>Add to Cart</button>
-            </div>
-        </div>
-    </div>
-
-
-    <hr />
-                                                           <!---------------- BEVERAGES SECTION ----------------------->
-
-
-    <h2 class="section-title" id="beverages">Beverages</h2>
-    <div class="menu-container">
-        <div class="food">
-            <img src="https://images.unsplash.com/photo-1662222516994-d78101779dc1" alt="Mocktail">
-            <div class="details">
-                <h5>Mocktails</h5>
-                <h5 class="price">RS 300</h5>
-            </div>
-            <div class="info">
-                <p>Refreshing fruity blends with soda and fresh herbs.</p>
-                <button>Add to Cart</button>
-            </div>
-        </div>
-
-        <div class="food">
-            <img src="https://t4.ftcdn.net/jpg/15/48/66/63/360_F_1548666383_k5g9olcRuJV2vCSzLrPDlvWrr4YzApvY.jpg" alt="Mint Margarita">
-            <div class="details">
-                <h5>Mint Margarita</h5>
-                <h5 class="price">RS 350</h5>
-            </div>
-            <div class="info">
-                <p>Fresh mint with lime and crushed ice.</p>
-                <button>Add to Cart</button>
-            </div>
-        </div>
-
-        <div class="food">
-            <img src="https://www.tentamus.com/wp-content/uploads/2022/03/Analyse-Orangensaft_Tentamus-2.jpg" alt="Orange Juice">
-            <div class="details">
-                <h5>Orange Juice</h5>
-                <h5 class="price">RS 120</h5>
-            </div>
-            <div class="info">
-                <p>Freshly squeezed oranges blended into juice.</p>
-                <button>Add to Cart</button>
-            </div>
-        </div>
-    </div>
+    </main>
 
     <footer id="Contact">
-        <h3>Contact Details</h3><br />
-        <p>F-11 Markaz, Islamabad</p><br />
-        <p>📞 Phone: (555) 123-4567</p><br />
-        <p>📧 Email: crustznbites@gmail.com</p><br />
-        <p>⏰ Open Daily: 11 AM – 10 PM</p><br />
+        <h3>Contact Details</h3>
+        <p>F-11 Markaz, Islamabad</p>
+        <p>📞 Phone: (555) 123-4567</p>
+        <p>📧 Email: crustznbites@gmail.com</p>
+        <p>⏰ Open Daily: 11 AM – 10 PM</p>
     </footer>
+
 
 </body>
 </html>
