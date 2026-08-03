@@ -3,358 +3,317 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crustz n' Bites - Menu</title>
+    <title>Crustz n' Bites | Menu</title>
 
-    <style>
-        /* For making website responssive on mobile */
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-            }
-        }
+    <link rel="stylesheet" href="menu.css">
 
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background: #FAF9F6;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        /* ===== HEADER ===== */
-        .Header {
-            height: 450px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1682778418768-16081e4470a1?fm=jpg&q=60&w=3000');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .header-content h1 {
-            font-size: 4em;
-            margin-bottom: 0.3em;
-        }
-
-        .header-content p {
-            font-size: 1.5em;
-        }
-
-        /* ===== MAIN NAVBAR  ===== */
-        .navbar {
-            background-color: #333;
-            text-align:center;
-            padding:15px;
-            background: #333 linear-gradient(to bottom, #333 85%, #555 100%);
-        }
-
-
-            .navbar a {
-                text-decoration: none;
-                color: white;
-                margin: 0 25px;
-                font-size: 23px;
-                font-weight: bold;
-                padding-bottom:10px;
-            }
-
-                .navbar a:hover {
-                    color: #f4c430;
-                }
-
-
-        .secondNav {
-            background-color: #555;
-            padding: 10px 15px;
-            text-align:center;
-        }
-
-            .secondNav a {
-                text-decoration: none;
-                color: white;
-                margin: 0 25px;
-                font-size: 20px;
-                font-weight: bold;
-            }
-
-                .secondNav a:hover {
-                    color: #f4c430;
-                }
-
-        /* ===== SECTION TITLES ===== */
-        .section-title {
-            text-align: center;
-            font-size: 30px;
-            font-weight: 700;
-            color: black;
-            margin: 40px 0 20px;
-            text-transform: uppercase;
-        }
-
-        /* ===== MENU CARDS ===== */
-        .menu-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 25px;
-            padding: 20px;
-        }
-
-        /*-------------- FOOD DIV CLASS IS FOR MAKING CARDS OF FOOD BY USING FLEX BOX AND MAKING A CONTAINER -----------------------*/
-
-        .food {
-            width: 33%;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 0 15px #00000035;
-            overflow: hidden;
-            flex: 1 1 250px;
-            max-width: 100%;
-        }
-
-            .food img {
-                width: 100%;
-                height: 250px;
-                object-fit: cover;
-            }
-
-        /*--------------  FOOD NAME AND PRICE ---------------------*/
-
-        .details {
-            justify-content: space-between;
-            padding: 15px;
-        }
-
-            .details h5 {
-                font-size: 18px;
-                font-weight: 600;
-            }
-
-        .price {
-            font-size: 18px;
-            font-weight: 700;
-            color: rgb(245, 78, 0);
-        }
-
-      /*---------------- FOR FOOD CARDS BUTTONS AND INFO ----------------------*/
-
-        .info {
-            padding: 0 15px 20px;
-        }
-
-            .info p {
-                color: #6f6f6f;
-                font-size: 15px;
-                margin-bottom: 12px;
-                line-height: 22px;
-            }
-
-            .info button {
-                background: red;
-                color: white;
-                border: none;
-                padding: 10px 0;
-                width: 160px;
-                font-size: 14px;
-                font-weight: 600;
-                border-radius: 5px;
-                cursor: pointer;
-            }
-
-                .info button:hover {
-                    background: darkred;
-                }
-
-        /*--------section divider is hr---------*/
-        hr {
-            height: 5px;
-            background: rgba(0, 0, 0, 0.4);
-            margin: 20px 0;
-        }
-
-        /* ===== FOOTER ===== */
-
-        footer {
-            padding: 35px ;
-            background-color: #333;
-            color: white;
-            text-align: center;
-            font-size: 1em;
-
-        }
-
-            footer h3 {
-                color: #f4c430;
-            }
-
-    </style>
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-    <header class="Header">
-        <div class="header-content">
-            <h1>Crustz n' Bites</h1>
-            <p>Experience the Taste of Tradition</p>
-        </div>
-    </header>
+    <!-- ================= NAVIGATION BAR ================= -->
 
     <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="menu.html">Menu</a>
-        <a href="#Contact">Contact</a>
+
+        <div class="navbarLogo">
+            Crustz n' Bites
+        </div>
+
+        <ul class="navbarLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#featuredDishes">Featured</a></li>
+            <li><a href="#footerSection">Contact</a></li>
+        </ul>
+
+        <div class="cartCounter">
+            🛒 Cart (<span id="cartCount">0</span>)
+        </div>
+
     </nav>
 
-    <nav class="secondNav">
-        <a href="#fastfood">Fast Foods</a>
-        <a href="#desserts">Desserts</a>
-        <a href="#beverages">Beverages</a>
-    </nav>
+    <!-- ================= MENU HERO SECTION ================= -->
 
+    <header class="menuHeroSection">
 
-                       <!------------------FAST FOOD SECTION------------------------->
+        <div class="menuHeroContent">
 
+            <h1 class="menuHeroTitle">
+                Explore Our Premium Menu
+            </h1>
 
-    <h2 class="section-title" id="fastfood">Fast Foods</h2>
-    <div class="menu-container">
-        <div class="food">
-            <img src="https://img.freepik.com/free-photo/delicious-vegan-burger-presentation_23-2151910916.jpg" alt="Zinger Burger">
-            <div class="details">
-                <h5>Chicken Zinger Burger</h5>
-                <h5 class="price">RS 550</h5>
-            </div>
-            <div class="info">
-                <p>Crispy chicken patty with cheese, sauces and fresh vegetables.</p>
-                <button>Add to Cart</button>
-            </div>
+            <p class="menuHeroDescription">
+                A carefully curated selection of international flavors,
+                handcrafted dishes, refreshing beverages, and irresistible desserts.
+            </p>
+
         </div>
 
-        <div class="food">
-            <img src="https://images.pexels.com/photos/2955819/pexels-photo-2955819.jpeg" alt="Spicy Burrito">
-            <div class="details">
-                <h5>Spicy Burrito</h5>
-                <h5 class="price">RS 850</h5>
-            </div>
-            <div class="info">
-                <p>Soft burrito filled with spicy chicken and fresh vegetables.</p>
-                <button>Add to Cart</button>
-            </div>
+    </header>
+
+    <!-- ================= MENU CONTROLS SECTION ================= -->
+
+    <section class="menuControlsSection">
+
+        <input
+            type="text"
+            id="menuSearchInput"
+            class="menuSearchInput"
+            placeholder="Search your favorite dish...">
+
+        <div class="menuCategoryButtons">
+
+            <button class="menuCategoryButton activeFilter"
+                    data-category="all">
+                All
+            </button>
+
+            <button class="menuCategoryButton"
+                    data-category="fastFood">
+                Fast Food
+            </button>
+
+            <button class="menuCategoryButton"
+                    data-category="dessert">
+                Desserts
+            </button>
+
+            <button class="menuCategoryButton"
+                    data-category="beverage">
+                Beverages
+            </button>
+
         </div>
 
-        <div class="food">
-            <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1RlslO.img" alt="Sandwich">
-            <div class="details">
-                <h5>Salad Sandwich</h5>
-                <h5 class="price">RS 350</h5>
+    </section>
+
+    <!-- ================= FEATURED DISHES SECTION ================= -->
+
+    <section class="featuredDishesSection" id="featuredDishes">
+
+        <h2 class="sectionTitle">
+            Chef's Recommendations
+        </h2>
+
+        <div class="featuredDishesGrid">
+
+            <div class="menuItemCard fastFood">
+
+                <span class="featuredBadge">
+                    Chef's Choice
+                </span>
+
+                <img src="https://img.freepik.com/free-photo/delicious-vegan-burger-presentation_23-2151910916.jpg"
+                     alt="Chicken Zinger Burger">
+
+                <div class="menuItemDetails">
+
+                    <h3>Chicken Zinger Burger</h3>
+
+                    <span class="menuItemPrice">
+                        Rs 550
+                    </span>
+
+                    <p>
+                        Crispy chicken patty with premium cheese,
+                        sauces and fresh vegetables.
+                    </p>
+
+                    <button class="addToCartButton"
+                            data-name="Chicken Zinger Burger">
+                        Add To Cart
+                    </button>
+
+                </div>
+
             </div>
-            <div class="info">
-                <p>Healthy sandwich filled with vegetables and light sauces.</p>
-                <button>Add to Cart</button>
+
+            <div class="menuItemCard dessert">
+
+                <span class="featuredBadge">
+                    Best Seller
+                </span>
+
+                <img src="https://crvenajabukamarindvor.ba/wp-content/uploads/2024/04/V-INSP-26-28-04-BANER-body.jpg"
+                     alt="Lotus Cheese Pastry">
+
+                <div class="menuItemDetails">
+
+                    <h3>Lotus Cheese Pastry</h3>
+
+                    <span class="menuItemPrice">
+                        Rs 550
+                    </span>
+
+                    <p>
+                        Creamy cheesecake layered with lotus spread
+                        and crunchy biscuit crumbs.
+                    </p>
+
+                    <button class="addToCartButton"
+                            data-name="Lotus Cheese Pastry">
+                        Add To Cart
+                    </button>
+
+                </div>
+
             </div>
+
+            <div class="menuItemCard beverage">
+
+                <span class="featuredBadge">
+                    Popular
+                </span>
+
+                <img src="https://t4.ftcdn.net/jpg/15/48/66/63/360_F_1548666383_k5g9olcRuJV2vCSzLrPDlvWrr4YzApvY.jpg"
+                     alt="Mint Margarita">
+
+                <div class="menuItemDetails">
+
+                    <h3>Mint Margarita</h3>
+
+                    <span class="menuItemPrice">
+                        Rs 350
+                    </span>
+
+                    <p>
+                        Refreshing mint leaves blended with fresh lime
+                        and crushed ice.
+                    </p>
+
+                    <button class="addToCartButton"
+                            data-name="Mint Margarita">
+                        Add To Cart
+                    </button>
+
+                </div>
+
+            </div>
+
         </div>
-    </div>
 
+    </section>
 
-    <hr />
-                                                               <!---------------- DESSERT SECTION ----------------------->
+    <!-- ================= FAST FOOD SECTION ================= -->
 
-    <h2 class="section-title" id="desserts">Desserts</h2>
-    <div class="menu-container">
-        <div class="food">
-            <img src="https://crvenajabukamarindvor.ba/wp-content/uploads/2024/04/V-INSP-26-28-04-BANER-body.jpg" alt="Lotus Pastry">
-            <div class="details">
-                <h5>Lotus Cheese Pastry</h5>
-                <h5 class="price">RS 550</h5>
+    <section class="menuCategorySection">
+
+        <h2 class="sectionTitle">
+            Fast Food
+        </h2>
+
+        <div class="menuItemsGrid">
+
+            <div class="menuItemCard fastFood">
+                <img src="https://images.pexels.com/photos/2955819/pexels-photo-2955819.jpeg">
+                <div class="menuItemDetails">
+                    <h3>Spicy Burrito</h3>
+                    <span class="menuItemPrice">Rs 850</span>
+                    <p>Soft burrito filled with spicy chicken and fresh vegetables.</p>
+                    <button class="addToCartButton" data-name="Spicy Burrito">Add To Cart</button>
+                </div>
             </div>
-            <div class="info">
-                <p>Creamy cheesecake layered with lotus spread and biscuit crumbs.</p>
-                <button>Add to Cart</button>
+
+            <div class="menuItemCard fastFood">
+                <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1RlslO.img">
+                <div class="menuItemDetails">
+                    <h3>Salad Sandwich</h3>
+                    <span class="menuItemPrice">Rs 350</span>
+                    <p>Healthy sandwich filled with vegetables and light sauces.</p>
+                    <button class="addToCartButton" data-name="Salad Sandwich">Add To Cart</button>
+                </div>
             </div>
+
         </div>
 
-        <div class="food">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS47oAQMA5W6ddJWuETVS0l3k5sPDinriIGyQ&s" alt="Nutella Pastry">
-            <div class="details">
-                <h5>Nutella Pastry</h5>
-                <h5 class="price">RS 450</h5>
+    </section>
+
+    <!-- ================= DESSERT SECTION ================= -->
+
+    <section class="menuCategorySection">
+
+        <h2 class="sectionTitle">
+            Desserts
+        </h2>
+
+        <div class="menuItemsGrid">
+
+            <div class="menuItemCard dessert">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS47oAQMA5W6ddJWuETVS0l3k5sPDinriIGyQ&s">
+                <div class="menuItemDetails">
+                    <h3>Nutella Pastry</h3>
+                    <span class="menuItemPrice">Rs 450</span>
+                    <p>Soft chocolate sponge filled with rich Nutella cream.</p>
+                    <button class="addToCartButton" data-name="Nutella Pastry">Add To Cart</button>
+                </div>
             </div>
-            <div class="info">
-                <p>Soft chocolate sponge filled with rich Nutella cream.</p>
-                <button>Add to Cart</button>
+
+            <div class="menuItemCard dessert">
+                <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-0sla99t4bs28up65k9597o7pm3-20191117040118.Medi.jpeg">
+                <div class="menuItemDetails">
+                    <h3>Baklava</h3>
+                    <span class="menuItemPrice">Rs 400</span>
+                    <p>Crispy filo pastry filled with nuts and sweet syrup.</p>
+                    <button class="addToCartButton" data-name="Baklava">Add To Cart</button>
+                </div>
             </div>
+
         </div>
 
-        <div class="food">
-            <img src="https://s3.ap-southeast-1.amazonaws.com/images.deccanchronicle.com/dc-Cover-0sla99t4bs28up65k9597o7pm3-20191117040118.Medi.jpeg" alt="Baklava">
-            <div class="details">
-                <h5>Baklava</h5>
-                <h5 class="price">RS 400</h5>
-            </div>
-            <div class="info">
-                <p>Crispy filo pastry filled with nuts and sweet syrup.</p>
-                <button>Add to Cart</button>
-            </div>
-        </div>
-    </div>
+    </section>
 
+    <!-- ================= BEVERAGES SECTION ================= -->
 
-    <hr />
-                                                           <!---------------- BEVERAGES SECTION ----------------------->
+    <section class="menuCategorySection">
 
+        <h2 class="sectionTitle">
+            Beverages
+        </h2>
 
-    <h2 class="section-title" id="beverages">Beverages</h2>
-    <div class="menu-container">
-        <div class="food">
-            <img src="https://images.unsplash.com/photo-1662222516994-d78101779dc1" alt="Mocktail">
-            <div class="details">
-                <h5>Mocktails</h5>
-                <h5 class="price">RS 300</h5>
-            </div>
-            <div class="info">
-                <p>Refreshing fruity blends with soda and fresh herbs.</p>
-                <button>Add to Cart</button>
-            </div>
-        </div>
+        <div class="menuItemsGrid">
 
-        <div class="food">
-            <img src="https://t4.ftcdn.net/jpg/15/48/66/63/360_F_1548666383_k5g9olcRuJV2vCSzLrPDlvWrr4YzApvY.jpg" alt="Mint Margarita">
-            <div class="details">
-                <h5>Mint Margarita</h5>
-                <h5 class="price">RS 350</h5>
+            <div class="menuItemCard beverage">
+                <img src="https://images.unsplash.com/photo-1662222516994-d78101779dc1">
+                <div class="menuItemDetails">
+                    <h3>Mocktails</h3>
+                    <span class="menuItemPrice">Rs 300</span>
+                    <p>Refreshing fruity blends with soda and fresh herbs.</p>
+                    <button class="addToCartButton" data-name="Mocktails">Add To Cart</button>
+                </div>
             </div>
-            <div class="info">
-                <p>Fresh mint with lime and crushed ice.</p>
-                <button>Add to Cart</button>
+
+            <div class="menuItemCard beverage">
+                <img src="https://www.tentamus.com/wp-content/uploads/2022/03/Analyse-Orangensaft_Tentamus-2.jpg">
+                <div class="menuItemDetails">
+                    <h3>Orange Juice</h3>
+                    <span class="menuItemPrice">Rs 120</span>
+                    <p>Freshly squeezed oranges blended into juice.</p>
+                    <button class="addToCartButton" data-name="Orange Juice">Add To Cart</button>
+                </div>
             </div>
+
         </div>
 
-        <div class="food">
-            <img src="https://www.tentamus.com/wp-content/uploads/2022/03/Analyse-Orangensaft_Tentamus-2.jpg" alt="Orange Juice">
-            <div class="details">
-                <h5>Orange Juice</h5>
-                <h5 class="price">RS 120</h5>
-            </div>
-            <div class="info">
-                <p>Freshly squeezed oranges blended into juice.</p>
-                <button>Add to Cart</button>
-            </div>
-        </div>
-    </div>
+    </section>
 
-    <footer id="Contact">
-        <h3>Contact Details</h3><br />
-        <p>F-11 Markaz, Islamabad</p><br />
-        <p>📞 Phone: (555) 123-4567</p><br />
-        <p>📧 Email: crustznbites@gmail.com</p><br />
-        <p>⏰ Open Daily: 11 AM – 10 PM</p><br />
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footerSection" id="footerSection">
+
+        <h2 class="footerTitle">
+            Crustz n' Bites
+        </h2>
+
+        <p class="footerInfo">📍 F-11 Markaz, Islamabad</p>
+        <p class="footerInfo">📞 +92 XXX XXXXXXX</p>
+        <p class="footerInfo">📧 crustznbites@gmail.com</p>
+        <p class="footerInfo">⏰ Open Daily: 11 AM – 11 PM</p>
+
     </footer>
+
+    <div id="toastNotification"></div>
+
+    <script src="menu.js"></script>
 
 </body>
 </html>

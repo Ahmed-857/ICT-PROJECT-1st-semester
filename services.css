@@ -1,0 +1,398 @@
+/* ================= GLOBAL SETTINGS ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background-color:#101820;
+    color:#F5F5F5;
+    opacity:0;
+    transition:0.6s;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 8%;
+
+    background:rgba(0,0,0,0.85);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid #2A2A2A;
+}
+
+.navbarLogo{
+    font-size:1.8rem;
+    font-weight:700;
+    color:#D4AF37;
+}
+
+.navbarLinks{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+.navbarLinks a{
+    text-decoration:none;
+    color:#F5F5F5;
+    transition:0.3s;
+}
+
+.navbarLinks a:hover{
+    color:#D4AF37;
+}
+
+/* ================= HERO SECTION ================= */
+
+.servicesHeroSection{
+
+    height:70vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,0.75),
+    rgba(0,0,0,0.75)
+    ),
+    url("https://images.unsplash.com/photo-1552566626-52f8b828add9");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.servicesHeroContent{
+    max-width:900px;
+    padding:20px;
+}
+
+.servicesHeroTitle{
+
+    font-size:4rem;
+    color:#D4AF37;
+    margin-bottom:20px;
+}
+
+.servicesHeroDescription{
+
+    font-size:1.2rem;
+    line-height:1.8;
+    color:#C0C0C0;
+}
+
+/* ================= SECTION HEADINGS ================= */
+
+.sectionTitle{
+
+    text-align:center;
+
+    font-size:2.3rem;
+
+    color:#D4AF37;
+
+    margin-bottom:25px;
+}
+
+.sectionDescription{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+    color:#B0B0B0;
+
+    line-height:1.9;
+}
+
+/* ================= INTRO SECTION ================= */
+
+.servicesIntroductionSection{
+
+    padding:100px 8%;
+}
+
+/* ================= SERVICES SECTION ================= */
+
+.restaurantServicesSection{
+
+    padding:100px 8%;
+}
+
+.restaurantServicesGrid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+}
+
+.restaurantServiceCard{
+
+    background:#1A1A1A;
+
+    border:1px solid #2E2E2E;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    transition:0.35s;
+}
+
+.restaurantServiceCard:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#D4AF37;
+
+    box-shadow:
+    0 10px 30px rgba(212,175,55,0.20);
+}
+
+.restaurantServiceCard img{
+
+    width:100%;
+    height:240px;
+
+    object-fit:cover;
+}
+
+.serviceCardContent{
+    padding:25px;
+}
+
+.serviceCardContent h3{
+
+    color:#D4AF37;
+
+    margin-bottom:15px;
+}
+
+.serviceCardContent p{
+
+    color:#B0B0B0;
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+}
+
+/* ================= SERVICE BUTTON ================= */
+
+.serviceRequestButton{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#D4AF37;
+
+    color:#121212;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.serviceRequestButton:hover{
+
+    background:#E6C65C;
+
+    transform:translateY(-2px);
+}
+
+/* ================= STATISTICS SECTION ================= */
+
+.restaurantStatisticsSection{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:50px;
+
+    padding:100px 8%;
+}
+
+.statisticsCard{
+
+    text-align:center;
+}
+
+.statisticsNumber{
+
+    font-size:3rem;
+
+    color:#D4AF37;
+}
+
+.statisticsCard p{
+
+    color:#B0B0B0;
+}
+
+/* ================= WHY CHOOSE US ================= */
+
+.whyChooseUsSection{
+
+    padding:100px 8%;
+}
+
+.whyChooseUsGrid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+}
+
+.whyChooseUsCard{
+
+    background:#1A1A1A;
+
+    border:1px solid #2E2E2E;
+
+    border-radius:15px;
+
+    padding:30px;
+
+    text-align:center;
+
+    color:#F5F5F5;
+
+    transition:0.3s;
+}
+
+.whyChooseUsCard:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#D4AF37;
+
+    box-shadow:
+    0 10px 25px rgba(212,175,55,0.20);
+}
+
+/* ================= TOAST ================= */
+
+#toastNotification{
+
+    position:fixed;
+
+    right:30px;
+    bottom:30px;
+
+    background:#D4AF37;
+
+    color:#121212;
+
+    padding:15px 25px;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+    opacity:0;
+
+    transition:0.4s;
+
+    pointer-events:none;
+}
+
+.showToast{
+    opacity:1 !important;
+}
+
+/* ================= FOOTER ================= */
+
+.footerSection{
+
+    background:#0A0A0A;
+
+    padding:70px 20px;
+
+    text-align:center;
+
+    border-top:1px solid #222;
+}
+
+.footerTitle{
+
+    color:#D4AF37;
+
+    margin-bottom:20px;
+}
+
+.footerInfo{
+
+    color:#B0B0B0;
+
+    margin:10px 0;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:20px;
+    }
+
+    .navbarLinks{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+    }
+
+    .servicesHeroTitle{
+        font-size:2.6rem;
+    }
+
+    .servicesHeroDescription{
+        font-size:1rem;
+    }
+
+    .sectionTitle{
+        font-size:2rem;
+    }
+}

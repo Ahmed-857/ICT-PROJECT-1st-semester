@@ -3,213 +3,323 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crustz n' Bites Services</title>
+    <title>Crustz n' Bites | Services</title>
 
-    <style>
-        /* For making website responssive on mobile */
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-            }
-        }
+    <link rel="stylesheet" href="services.css">
 
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-        }
-
-        /* HEADER */
-        .Header {
-            height: 450px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1682778418768-16081e4470a1?fm=jpg&q=60&w=3000');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .header-content h1 {
-            font-size: 4em;
-            margin-bottom: 0.3em;
-        }
-
-        .header-content p {
-            font-size: 1.5em;
-        }
-
-        /* NAVBAR */
-        .navbar {
-            background-color: #333;
-            text-align: center;
-            padding: 15px;
-        }
-
-            .navbar a {
-                text-decoration: none;
-                color: white;
-                margin: 0 25px;
-                font-size: 20px;
-                font-weight: bold;
-            }
-
-                .navbar a:hover {
-                    color: #f4c430;
-                }
-
-        main section {
-            padding: 60px;
-            text-align: center;
-            background-color: #FAF9F6;
-        }
-
-        h2 {
-            font-size: 2em;
-        }
-
-
-        /* SERVICES */
-        .servicesBox {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 25px;
-            margin-top: 30px;
-        }
-
-        .service {
-            background-color: #efd88a;
-            padding: 20px;
-            border-radius: 20px;
-            width: 280px;
-        }
-
-            .service:hover {
-                transform: translateY(-8px);
-                background-color: #f4c430;
-                cursor: pointer;
-            }
-
-            .service h3 {
-                margin-bottom: 10px;
-            }
-
-            /* SERVICES IMAGES */
-            .service img {
-                width: 100%;
-                height: 180px;
-                object-fit: cover;
-                border-radius: 15px;
-                margin-bottom: 10px;
-            }
-
-        footer {
-            padding: 20px;
-            background-color: #333;
-            color: white;
-            text-align: center;
-        }
-
-            footer h3 {
-                color: #f4c430;
-            }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-    <!-- HEADER -->
-    <header class="Header">
-        <div class="header-content">
-            <h1>Crustz n' Bites</h1>
-            <p>Experience the Taste of Tradition</p>
-        </div>
-    </header>
+    <!-- ================= NAVIGATION BAR ================= -->
 
-    <!-- NAVBAR -->
     <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="menu.html">Menu</a>
-        <a href="#Contact">Contact</a>
+
+        <div class="navbarLogo">
+            Crustz n' Bites
+        </div>
+
+        <ul class="navbarLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="#restaurantServicesSection">Services</a></li>
+            <li><a href="#footerSection">Contact</a></li>
+        </ul>
+
     </nav>
 
-    <main>
+    <!-- ================= SERVICES HERO SECTION ================= -->
 
-        <!-- SERVICES INTRO -->
-        <section id="sectionintro" >
-            <h2>Our Services</h2>
-            <p>
-                At Crustz n’ Bites, we don’t just serve food — we create experiences.
-                From relaxed dine-ins to special occasions, we’re here for you.
+    <header class="servicesHeroSection">
+
+        <div class="servicesHeroContent">
+
+            <h1 class="servicesHeroTitle">
+                Exceptional Service Beyond Dining
+            </h1>
+
+            <p class="servicesHeroDescription">
+                From intimate family dinners to corporate events and premium catering,
+                Crustz n' Bites delivers memorable experiences with world-class hospitality.
             </p>
 
-            <!-- SERVICES CONTENT -->
-            <div class="servicesBox">
+        </div>
 
-                <div class="service">
-                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5" alt="Dine In">
-                    <h3>🍽️ Dine-In</h3>
+    </header>
+
+    <!-- ================= SERVICES INTRO SECTION ================= -->
+
+    <section class="servicesIntroductionSection">
+
+        <h2 class="sectionTitle">
+            What We Offer
+        </h2>
+
+        <p class="sectionDescription">
+
+            At Crustz n' Bites, we don't just serve food.
+            We create unforgettable moments through premium dining,
+            catering, reservations, and personalized customer experiences.
+
+        </p>
+
+    </section>
+
+    <!-- ================= SERVICES GRID SECTION ================= -->
+
+    <section class="restaurantServicesSection" id="restaurantServicesSection">
+
+        <div class="restaurantServicesGrid">
+
+            <div class="restaurantServiceCard">
+
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5"
+                     alt="Dine In">
+
+                <div class="serviceCardContent">
+
+                    <h3>🍽 Premium Dine-In</h3>
+
                     <p>
-                        Enjoy a warm, comfortable atmosphere with freshly prepared
-                        meals with your family and an ideal place for corporate dinners.
+                        Enjoy elegant dining spaces with exceptional service,
+                        handcrafted dishes, and a welcoming atmosphere.
                     </p>
+
+                    <button class="serviceRequestButton"
+                            data-service="Premium Dine-In">
+                        Request Service
+                    </button>
+
                 </div>
-
-                <div class="service">
-                    <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="Takeaway">
-                    <h3>🚗 Takeaway</h3>
-                    <p>
-                        Order your favorite dishes and take them home —
-                        quick, easy, and delicious.
-                    </p>
-                </div>
-
-                <div class="service">
-                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4" alt="Event Catering" />
-                    <h3>🎉 Event Catering</h3>
-                    <p>
-                        Hosting a party or meeting? We offer catering services
-                        with customized menus for every occasion.
-                    </p>
-                </div>
-
-                <div class="service">
-                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0" alt="Table Booking">
-                    <h3>📅 Book a Table</h3>
-                    <p>
-                        Reserve your table in advance and enjoy a smooth,
-                        hassle-free dining experience with your loved ones.
-                    </p>
-                </div>
-
-
-                <div class="service">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqqNNWx6mHXIVtL480D7Gd-bcSaufI5300nQ&s" alt="Home Delivery">
-                    <h3>🚚 Home Delivery</h3>
-                    <p>
-                        Get delicious meals delivered hot and fresh straight to
-                        your doorstep, anytime you crave comfort food.
-                    </p>
-                </div>
-
 
             </div>
-        </section>
 
-    </main>
+            <div class="restaurantServiceCard">
 
-    <!--FOOTER-->
-    <footer id="Contact">
-        <h3>Contact Details</h3>
-        <p>F-11 Markaz, Islamabad</p>
-        <p>📞 Phone: (555) 123-4567</p>
-        <p>📧 Email: crustznbites@gmail.com</p>
-        <p>⏰ Open Daily: 11 AM – 10 PM</p>
+                <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092"
+                     alt="Takeaway">
+
+                <div class="serviceCardContent">
+
+                    <h3>🚗 Fast Takeaway</h3>
+
+                    <p>
+                        Order quickly and enjoy your favorite meals wherever you are.
+                    </p>
+
+                    <button class="serviceRequestButton"
+                            data-service="Fast Takeaway">
+                        Request Service
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="restaurantServiceCard">
+
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"
+                     alt="Event Catering">
+
+                <div class="serviceCardContent">
+
+                    <h3>🎉 Event Catering</h3>
+
+                    <p>
+                        Premium catering services for weddings,
+                        birthdays, conferences, and special events.
+                    </p>
+
+                    <button class="serviceRequestButton"
+                            data-service="Event Catering">
+                        Request Service
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="restaurantServiceCard">
+
+                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0"
+                     alt="Reservations">
+
+                <div class="serviceCardContent">
+
+                    <h3>📅 Table Reservations</h3>
+
+                    <p>
+                        Reserve your table online and enjoy a smooth,
+                        priority dining experience.
+                    </p>
+
+                    <button class="serviceRequestButton"
+                            data-service="Table Reservation">
+                        Request Service
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="restaurantServiceCard">
+
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqqNNWx6mHXIVtL480D7Gd-bcSaufI5300nQ&s"
+                     alt="Delivery">
+
+                <div class="serviceCardContent">
+
+                    <h3>🚚 Home Delivery</h3>
+
+                    <p>
+                        Freshly prepared meals delivered directly to your doorstep.
+                    </p>
+
+                    <button class="serviceRequestButton"
+                            data-service="Home Delivery">
+                        Request Service
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="restaurantServiceCard">
+
+                <img src="https://images.unsplash.com/photo-1511578314322-379afb476865"
+                     alt="Corporate Events">
+
+                <div class="serviceCardContent">
+
+                    <h3>🏢 Corporate Events</h3>
+
+                    <p>
+                        Professional catering and event arrangements
+                        tailored for businesses and organizations.
+                    </p>
+
+                    <button class="serviceRequestButton"
+                            data-service="Corporate Events">
+                        Request Service
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= RESTAURANT STATS ================= -->
+
+    <section class="restaurantStatisticsSection">
+
+        <div class="statisticsCard">
+
+            <h2 class="statisticsNumber"
+                data-target="10000">
+                0
+            </h2>
+
+            <p>Happy Guests</p>
+
+        </div>
+
+        <div class="statisticsCard">
+
+            <h2 class="statisticsNumber"
+                data-target="50">
+                0
+            </h2>
+
+            <p>Premium Dishes</p>
+
+        </div>
+
+        <div class="statisticsCard">
+
+            <h2 class="statisticsNumber"
+                data-target="15">
+                0
+            </h2>
+
+            <p>Expert Chefs</p>
+
+        </div>
+
+        <div class="statisticsCard">
+
+            <h2 class="statisticsNumber"
+                data-target="5">
+                0
+            </h2>
+
+            <p>Years Experience</p>
+
+        </div>
+
+    </section>
+
+    <!-- ================= WHY CHOOSE US ================= -->
+
+    <section class="whyChooseUsSection">
+
+        <h2 class="sectionTitle">
+            Why Choose Crustz n' Bites?
+        </h2>
+
+        <div class="whyChooseUsGrid">
+
+            <div class="whyChooseUsCard">
+                ⭐ Premium Ingredients
+            </div>
+
+            <div class="whyChooseUsCard">
+                🍽 Luxury Dining Experience
+            </div>
+
+            <div class="whyChooseUsCard">
+                👨‍🍳 Professional Chefs
+            </div>
+
+            <div class="whyChooseUsCard">
+                🚚 Fast Delivery Service
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footerSection" id="footerSection">
+
+        <h2 class="footerTitle">
+            Crustz n' Bites
+        </h2>
+
+        <p class="footerInfo">
+            📍 F-11 Markaz, Islamabad
+        </p>
+
+        <p class="footerInfo">
+            📞 +92 XXX XXXXXXX
+        </p>
+
+        <p class="footerInfo">
+            📧 crustznbites@gmail.com
+        </p>
+
+        <p class="footerInfo">
+            ⏰ Open Daily: 11 AM – 11 PM
+        </p>
+
     </footer>
+
+    <div id="toastNotification"></div>
+
+    <script src="services.js"></script>
 
 </body>
 </html>
